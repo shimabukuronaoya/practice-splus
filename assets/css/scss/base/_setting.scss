@@ -1,0 +1,105 @@
+/**********************************************************
+
+ブレイクポイント
+
+***********************************************************/
+$breakpoint-large: 1281px !default;
+$breakpoint-hidePcHeader: 1024px !default;
+$breakpoint-pc: 768px !default;
+$breakpoint-sp: 767px !default;
+
+@mixin large {
+  @media screen and (min-width: ($breakpoint-large)) {
+    @content;
+  }
+}
+@mixin hidePcHeader {
+  @media screen and (max-width: ($breakpoint-hidePcHeader)) {
+    @content;
+  }
+}
+@mixin pc {
+  @media screen and (min-width: ($breakpoint-pc)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media screen and (max-width: ($breakpoint-sp)) {
+    @content;
+  }
+}
+
+//**********************************************************
+//
+//   color
+//
+//***********************************************************/
+$txt-color: #363636;
+$txt-green: #049C63;
+$btn-bgColor: #333;
+$header-bgColor: #ff7a2b;
+$box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+//**********************************************************
+//
+//   size
+//
+//***********************************************************/
+$container-width: 1000px;
+$header-width: 250px;
+$header-height-pc: 60px;
+$header-height-sp: 62px;
+$font-size: 16px;
+$sec-h-size: 30px;
+$pd-pc: clamp(70px, 8.1vw - 70px, 140px);
+$pd-pc-negative: clamp(-60px, -8.1vw + 35px, -30px);
+$pd-sp: 20px;
+
+//**********************************************************
+//
+//   font-family
+//
+//***********************************************************/
+@font-face {
+  font-family: 'Futura';
+  font-weight: normal;
+  src: url('../font/Futura-medium.ttc') format('truetype');
+}
+@font-face {
+  font-family: 'Futura';
+  font-weight: 600;
+  src: url('../font/Futura-bold.ttc') format('truetype');
+}
+
+$font-family: "ヒラギノ角ゴシック", -apple-system, BlinkMacSystemFont, Roboto,
+"Segoe UI", "Helvetica Neue", HelveticaNeue, "游ゴシック体", YuGothic,
+"游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ",
+sans-serif;
+
+$font-futura: "Futura","ヒラギノ角ゴシック", -apple-system, BlinkMacSystemFont, Roboto,
+"Segoe UI", "Helvetica Neue", HelveticaNeue, "游ゴシック体", YuGothic,
+"游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ",
+sans-serif;
+
+.font-futura {
+  font-family: $font-futura;
+}
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* pc sp 出し分けのためのcss
+――――――――――――――――――――――――――――――――――――――――――――――*/
+@include pc {
+  .sp {
+    display: none !important;
+  }
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+@include sp {
+  .pc {
+    display: none !important;
+  }
+}

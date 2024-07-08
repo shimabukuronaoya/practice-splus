@@ -1,0 +1,18 @@
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* ベースファイルを定義
+――――――――――――――――――――――――――――――――――――――――――――――*/
+
+@import "base/_setting.scss";
+@import "base/_reset.scss";
+@import "base/_base.scss";
+@import "base/_mixin.scss";
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* レイアウトに関するcss
+――――――――――――――――――――――――――――――――――――――――――――――*/
+@import "layout/_header.scss";
+@import "layout/_footer.scss";
+
+
+@import "_top.scss";

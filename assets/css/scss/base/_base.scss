@@ -1,0 +1,173 @@
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* html,body
+――――――――――――――――――――――――――――――――――――――――――――――*/
+* {
+  min-height: 0;
+  min-width: 0;
+}
+html {
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+
+  @include sp {
+    scroll-padding-top: 58px;
+    overflow-x: hidden;
+  }
+}
+
+body {
+  min-height: 100vh;
+  color: #001C10;
+  font-size: 16px;
+  font-family: $font-family;
+  line-height: 1.4;
+  background-color: #ffffff;
+  font-weight: 300;
+  position: relative;
+
+  @include sp {
+    overflow-x: hidden;
+  }
+}
+
+
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* デフォルトの設定
+――――――――――――――――――――――――――――――――――――――――――――――*/
+* > *:first-child {
+  margin-top: 0;
+}
+* > *:last-child {
+  margin-bottom: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+svg {
+  display: block;
+}
+a {
+  transition: 0.3s;
+  cursor: pointer;
+
+  &::before,&::after {
+    transition: 0.3s;
+  }
+  *::before,*::after {
+    transition: 0.3s;
+  }
+
+  &:hover {
+
+    @include pc {
+      opacity: 0.7;
+    }
+  }
+
+
+  circle,
+  path,
+  line,
+  rect {
+    transition: 0.3s;
+  }
+}
+input,
+textarea {
+  font-family: $font-family;
+}
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* 共通のレイアウト
+――――――――――――――――――――――――――――――――――――――――――――――*/
+
+/*** コンテナ ***/
+.l-bodyContainer {
+}
+
+/*** section ***/
+.l-section {
+  padding: 75px $pd-pc 75px;
+  position: relative;
+  background-color: #fff;
+}
+
+
+
+.l-content {
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+
+  &.--s {
+    max-width: 790px;
+  }
+}
+
+
+@include sp {
+  .l-section {
+    padding-right: $pd-sp;
+    padding-left: $pd-sp;
+  }
+  .l-content {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* 余白調整
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.l-pd {
+  padding-right: $pd-pc;
+  padding-left: $pd-pc;
+  }
+  .l-pd-left {
+  padding-left: $pd-pc;
+  }
+  .l-pd-right {
+  padding-right:$pd-pc;
+  }
+  .l-pd0 {
+    margin-left: $pd-pc-negative;
+    margin-right: $pd-pc-negative;
+  }
+  .l-pd0-left {
+  margin-left: $pd-pc-negative;
+  }
+  .l-pd0-right {
+  margin-right: $pd-pc-negative;
+  }
+
+  @include sp {
+  .l-pd {
+      padding-right: $pd-sp;
+      padding-left: $pd-sp;
+  }
+  .l-pd-left {
+      padding-left: $pd-sp;
+  }
+  .l-pd-right {
+      padding-right: $pd-sp;
+  }
+  .l-pd0 {
+    margin-left: (-$pd-sp);
+    margin-right: (-$pd-sp);
+  }
+  .l-pd0-left {
+      margin-left: (-$pd-sp);
+  }
+  .l-pd0-right {
+      margin-right: (-$pd-sp);
+  }
+  }
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* mixin
+――――――――――――――――――――――――――――――――――――――――――――――*/

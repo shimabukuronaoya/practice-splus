@@ -1,0 +1,56 @@
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* font
+――――――――――――――――――――――――――――――――――――――――――――――*/
+@mixin font($size: null, $height: null, $weight:null){
+  @if $size {
+    font-size: $size + px;
+  }
+  @if $height {
+    line-height: calc($height / $size);
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+}
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* vw
+――――――――――――――――――――――――――――――――――――――――――――――*/
+@function vw( $size: 16 ) {
+  $vw: $size * (100 / 1280) + vw;
+  @return $vw;
+}
+
+@function vw-sp( $size: 16 ) {
+  $vw: $size * (100 / 768) + vw;
+  @return $vw;
+}
+
+@function cl($min-size, $max-size, $min-viewport: 768, $max-viewport: 1280) {
+  @return clamp(#{$min-size}px, calc(#{$min-size}px + (($max-size - $min-size) * ((100vw - #{$min-viewport}px) / ($max-viewport - $min-viewport)))), #{$max-size}px);
+}
+
+@function clsp($min-size, $max-size, $min-viewport: 375, $max-viewport: 767) {
+  @return clamp(#{$min-size}px, calc(#{$min-size}px + (($max-size - $min-size) * ((100vw - #{$min-viewport}px) / ($max-viewport - $min-viewport)))), #{$max-size}px);
+}
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* line-height
+――――――――――――――――――――――――――――――――――――――――――――――*/
+@mixin lineHeightCrop($line-height) {
+  &::before {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: calc((1 - #{$line-height}) * .5em);
+    content: "";
+  }
+  &::after {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-bottom: calc((1 - #{$line-height}) * .5em);
+    content: "";
+  }
+ }
