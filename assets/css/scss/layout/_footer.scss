@@ -4,3 +4,78 @@ footer
 
 ***********************************************************/
 
+.footer {
+    padding: 30px 0 0;
+    background-color: #fff;
+    position: relative;
+  }
+  .footer__logo {
+    width: 133px;
+    margin: 0 auto 22px;
+  }
+  .footer__logoLink {
+  }
+  .footer__logoImg {
+  }
+  .footer__copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0243a6;
+    padding: 6px 15px;
+    text-align: center;
+  
+    small {
+      color: #fff;
+      font-size: 11px;
+    }
+  }
+  .footer__bitknot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 17px 15px;
+  }
+  .footerInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 30px 0;
+  
+    .headerInfo__left {
+      margin-bottom: 24px;
+    }
+    .headerInfo__linkIcon {
+      width: 37px;
+    }
+    .headerInfo__link.tel {
+        display: flex;
+        align-items: center;
+      .headerInfo__link-tel {
+        color: #000000;
+        font-weight: 600;
+        font-size: 20px;
+        margin-left: 7px;
+        height: fit-content;
+      }
+    }
+    .headerInfo__contact {
+      height: 41px;
+    }
+    .headerInfo__reserve {
+      height: 41px;
+    }
+  }
+  
+ 
+  
+  /*――――――――――――――――――――――――――――――――――――――――――――
+  /* pageTop
+  ――――――――――――――――――――――――――――――――――――――――――――――*/
+  .pageTop {
+    position: absolute;
+    right: 0;
+    top: -148px;
+    z-index: 0;
+  }
+  
