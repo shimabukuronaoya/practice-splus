@@ -89,6 +89,42 @@
 }
 
 /*――――――――――――――――――――――――――――――――――――――――――――
+/* pageTtl
+――――――――――――――――――――――――――――――――――――――――――――――*/
+
+.pageTtl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    z-index: 5;
+}
+
+.pageTtl__en {
+    display: block;
+    margin: 0 0 9px 0;
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+    line-height: 1.2;
+    font-family: "fot-chiaro-std";
+    font-weight: 700;
+}
+
+.pageTtl__ja {
+    display: block;
+    font-size: 48px;
+    color: #fff;
+    text-align: center;
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+    font-family: "fot-chiaro-std";
+    font-weight: 700;
+}
+
+/*――――――――――――――――――――――――――――――――――――――――――――
 /* topKvArea
 ――――――――――――――――――――――――――――――――――――――――――――――*/
 .topKvArea {
@@ -1127,7 +1163,23 @@ topBlog
     color: #30333c;
     line-height: 1.43;
     white-space: nowrap;
+
+    &+&::before{
+        position: absolute;
+        top: 0;
+        left: -14px;
+        bottom: 0;
+        margin: auto;
+        display: block;
+        content: '';
+        width: 1px;
+        height: 13px;
+        background-color: #d8d8d8;
+        transform: rotate(25deg);
+    }
   }
+
+
 
 
 
