@@ -70,7 +70,7 @@
                         </a>
                     </li>
                     <li class="headerNavList__item">
-                        <a href="#" class="headerNavList__link">
+                        <a href="/blog.php" class="headerNavList__link">
                             <span class="headerNavList__en">Blog</span>
                             <span class="headerNavList__ja">ブログ</span>
                         </a>
