@@ -440,7 +440,6 @@ $args = array(
 );
 $the_query = new WP_Query($args);
 
-var_dump($the_query);
 ?>
 
 <section class="l-section topBlogArea">
@@ -453,8 +452,6 @@ var_dump($the_query);
 
           $categories = get_the_category();
           $cat_name = $categories[0]->name;
-
-          var_dump($categories);
       ?>
             <li class="topBlogList__item">
                 <a href="<?php the_permalink(); ?>" class="topBlogList__link">
