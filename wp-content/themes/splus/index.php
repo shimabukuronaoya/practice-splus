@@ -467,7 +467,7 @@ $the_query = new WP_Query($args);
                         <p class="topBlogList__ttl"><?php the_title() ?></p>
                         <p class="topBlogList__date"><?php echo get_the_date(); ?></p>
                     </div>
-                    <p><?php the_content(); ?></p>
+                   
                 </a>
             </li>
             <?php endwhile;
